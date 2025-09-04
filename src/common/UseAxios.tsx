@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { baseUrl } from './BaseUrl';
+import { baseUrlApi } from './BaseUrl';
 import axiosAuthInstance from './axiosAuthInstance';
 const useAxios = (initialValue = {}) => {
   const [response, setResponse] = useState({
@@ -28,7 +28,7 @@ const useAxios = (initialValue = {}) => {
 
     axiosAuthInstance({
       ...options,
-      url: baseUrl + options.url,
+      url: baseUrlApi + options.url,
     })
       .then(({ data }) => {
         if (data) {

@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from 'react';
-import { ScaleLoader } from 'react-spinners';
+import { Suspense, useContext, useEffect, useState } from 'react';
+import { RingLoader } from 'react-spinners';
 import { AuthContext } from '../context/Providers/AuthContext';
 import LoginScreen from '../screen/LoginScreen';
 import UserApplication from './UserApplication';
@@ -19,11 +19,10 @@ const StartupScreen = () => {
 
   if (loading) {
     return (
-      <div>
-        <ScaleLoader
-          className='ml-2 flex items-center'
-          color='#F3A843'
-          height={20}
+      <div className='flex h-screen justify-center items-center bg-blue-gray-50'>
+        <RingLoader
+          size={80}
+          color='#1296E0'
         />
       </div>
     ); // can be spinner
@@ -31,7 +30,18 @@ const StartupScreen = () => {
 
   return token ? (
     <WrapperLayout>
-      <UserApplication />
+      <Suspense
+        fallback={
+          <div className='flex h-screen justify-center items-center bg-blue-gray-50'>
+            <RingLoader
+              size={80}
+              color='#1296E0'
+            />
+          </div>
+        }
+      >
+        <UserApplication />
+      </Suspense>
     </WrapperLayout>
   ) : (
     <LoginScreen />

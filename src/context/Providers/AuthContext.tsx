@@ -48,7 +48,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const getReloadAthData = () => {
-    const localStorageToken = JSON.parse(localStorage?.getItem('token'));
+    const tokenString = localStorage?.getItem('token');
+    const localStorageToken = tokenString ? JSON.parse(tokenString) : '';
     setToken(localStorageToken);
   };
 
