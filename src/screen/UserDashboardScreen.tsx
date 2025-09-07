@@ -40,9 +40,9 @@ const UserDashboardScreen = () => {
   console.log('getDashboardData', [getDashboardCardData?.data]);
 
   return (
-    <div className='flex flex-col gap-3'>
-      <div className='shadow-md rounded-md  bg-white p-3'>
-        <div className=' grid  md:grid-cols-4 gap-3 '>
+    <div className='flex flex-col gap-1 py-1'>
+      <div className='shadow-md rounded-md  bg-white p-2 '>
+        <div className=' grid  md:grid-cols-4 gap-2  '>
           {dashboardCard?.map((item, index) => (
             <CardReuse
               key={index}
@@ -61,7 +61,7 @@ const UserDashboardScreen = () => {
           ))}
         </div>
       </div>
-      <div className='lg:grid grid-cols-12 gap-3'>
+      <div className='lg:grid grid-cols-12 gap-1 '>
         <div className=' shadow-md rounded-md  bg-white p-3 col-span-8 '>
           {loading ? (
             <div className=' h-[350px] flex justify-center items-center'>

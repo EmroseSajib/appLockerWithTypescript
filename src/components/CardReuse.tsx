@@ -10,11 +10,11 @@ const CardReuse = ({
   count,
 }: cardProps) => {
   return (
-    <div className={`px-3 py-5 rounded-md ${bgcolor} `}>
+    <div className={`px-3 py-2 rounded-md ${bgcolor} `}>
       <div>
         <div className='flex justify-between items-center mb-4'>
           <div
-            className={`font-bold text-[95%] `}
+            className={`font-bold text-[80%] `}
             style={{ color: '#000000' }}
           >
             {name}
@@ -23,7 +23,7 @@ const CardReuse = ({
           <span className={`${borderColor} rounded-full p-2`}>{Icon} </span>
         </div>
         <div
-          className='mb-1 text-center text-3xl font-bold mt-2'
+          className='mb-1 text-center text-2xl font-bold mt-2'
           style={{ color: '#151D48' }}
         >
           {loading ? (

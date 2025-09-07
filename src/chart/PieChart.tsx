@@ -40,7 +40,7 @@ const PieChart: React.FC = ({ title }) => {
           options={state.options}
           series={state.series}
           type='pie'
-          width={380}
+          width={320}
         />
       </div>
       <h1 className='font-bold text-sm text-center'>{title}</h1>

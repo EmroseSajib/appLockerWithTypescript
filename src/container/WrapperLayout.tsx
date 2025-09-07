@@ -14,9 +14,7 @@ const WrapperLayout = ({ children }: props) => {
           <UserSideNav />
         </div>
         <div className='flex-1 overflow-x-hidden'>
-          <div className='min-h-screen px-3 pt-3   overflow-hidden'>
-            {children}
-          </div>
+          <div className='min-h-screen px-1  overflow-hidden'>{children}</div>
         </div>
       </div>
       {/* <FooterSection /> */}

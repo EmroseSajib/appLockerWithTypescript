@@ -20,7 +20,7 @@ const SplineChart: React.FC = ({ title }) => {
 
     options: {
       chart: {
-        height: 350,
+        // height: 350,
         type: 'area',
         zoom: {
           enabled: false,
@@ -61,7 +61,7 @@ const SplineChart: React.FC = ({ title }) => {
           options={state.options}
           series={state.series}
           type='area'
-          height={350}
+          height={285}
         />
       </div>
     </div>

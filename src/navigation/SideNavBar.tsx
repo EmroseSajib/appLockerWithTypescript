@@ -104,7 +104,7 @@ const SideNavBar = ({ menuList = [] }: props) => {
     <div
       className={` ${
         openSidebar ? 'w-72' : 'w-[90px] '
-      } bg-white min-h-screen p-5  my-3 sticky top-0 duration-300  shadow-md hidden lg:block rounded-md`}
+      } bg-white min-h-screen p-5  my-1 sticky top-0 duration-300  shadow-md hidden lg:block rounded-md`}
     >
       <img
         src='/assets/control.png'
